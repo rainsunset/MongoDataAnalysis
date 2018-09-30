@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  name: pureframe
+
+#自定义参数
+demoprop:
+  name: ${server.name}
+  sex: ${random.int[0,1]}
+
+#mongodb3.X的配置
+spring:
+  data:
+    mongodb:
+      uri: mongodb://172.20.186.11:2700/equipment
+
+info:
+  service-info: smart_home_service
+  api-doc: /swagger-ui.html
+swagger:
+  basePath: com.seer
+  title: pureframe 提供的API信息
+  description: API信息有疑问请联系相关开发人员
+  contact: ligw
+  version: 1.0-SNAPSHOT
